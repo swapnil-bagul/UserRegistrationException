@@ -67,5 +67,26 @@ namespace TestingUserRegistration
                 Assert.AreEqual(expected, ex.Message);
             }
         }
+
+        //Test for checking Email
+        [TestMethod]
+        public void TestUserEmail()
+        {
+            string message = null;
+            string expected = "invalid";
+
+            //Act
+            UserException testing = new UserException(message);
+
+            try
+            {
+                string actual = testing.getValidUserEmail();
+            }
+            catch (CustomException ex)
+            {
+                //Assert
+                Assert.AreEqual(expected, ex.Message);
+            }
+        }
     }
 }
