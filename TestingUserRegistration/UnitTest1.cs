@@ -15,6 +15,7 @@ namespace TestingUserRegistration
             //Act
             UserException testing = new UserException(message);
 
+            //handling exception
             try
             {
                 string actual = testing.getValidUserFirstName();

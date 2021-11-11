@@ -7,8 +7,10 @@ namespace UserRegistrationException
 {
     public class UserException
     {
-       
+            //instance variable
             public string message;
+            //constructor to intitialise
+
             public UserException(string message)
             {
                 this.message = message;
