@@ -26,5 +26,25 @@ namespace TestingUserRegistration
                 Assert.AreEqual(expected, ex.Message);
             }
         }
+        [TestMethod]
+        public void TestUserLastName()
+        {
+            string message = null;
+            string expected = "invalid";
+
+            //Act
+            UserException testing = new UserException(message);
+
+            //handling exception
+            try
+            {
+                string actual = testing.getvalidUserLastName();
+            }
+            catch (CustomException ex)
+            {
+                //Assert
+                Assert.AreEqual(expected, ex.Message);
+            }
+        }
     }
 }
