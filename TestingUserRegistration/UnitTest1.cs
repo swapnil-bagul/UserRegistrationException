@@ -26,6 +26,7 @@ namespace TestingUserRegistration
                 Assert.AreEqual(expected, ex.Message);
             }
         }
+        //test to checking lastneme
         [TestMethod]
         public void TestUserLastName()
         {
@@ -39,6 +40,26 @@ namespace TestingUserRegistration
             try
             {
                 string actual = testing.getvalidUserLastName();
+            }
+            catch (CustomException ex)
+            {
+                //Assert
+                Assert.AreEqual(expected, ex.Message);
+            }
+        }
+        //test to check mobilenumber
+        [TestMethod]
+        public void TestUserMobileNumber()
+        {
+            string message = null;
+            string expected = "invalid";
+
+            //Act
+            UserException testing = new UserException(message);
+
+            try
+            {
+                string actual = testing.getValidUserMobileNumber();
             }
             catch (CustomException ex)
             {
